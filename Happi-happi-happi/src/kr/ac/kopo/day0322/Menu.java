@@ -1,0 +1,43 @@
+package kr.ac.kopo.day0322;
+
+import java.util.Scanner;
+
+public class Menu {
+	
+	
+	public void process() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("출력할 프린터를 선택하세요 (1.LG,  2.삼성) => ");
+		String type = sc.nextLine();
+
+		/*
+		switch(type) {
+		case "1" :
+			LGPrinter lg = new LGPrinter();
+			lg.lgPrint();
+			break;
+		case "2": 
+			SamsungPrinter sam = new SamsungPrinter();
+			sam.samPrint();
+			break;
+		default:
+			System.out.println("잘못선택하셨습니다");
+		}
+		*/
+		
+		switch(type) {
+		case "1" :
+			LGPrinter lg = new LGPrinter();
+			lg.print();
+			break;
+		case "2": 
+			SamsungPrinter sam = new SamsungPrinter();
+			sam.print();
+			break;
+		default:
+			System.out.println("잘못선택하셨습니다");
+		}
+	
+	}
+
+}
