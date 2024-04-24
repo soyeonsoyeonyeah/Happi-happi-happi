@@ -13,7 +13,6 @@ import kr.ac.kopo.vo.MemberVO;
 public class InboxDAO {
 
 	public List<InboxVO> inbox() {
-		
 		List<InboxVO> list = new ArrayList<>();
 		StringBuilder sql = new StringBuilder();
 		sql.append("select email_cd, sender, receiver, title, contents ");
@@ -25,13 +24,8 @@ public class InboxDAO {
 					
 			) {
 			pstmt.setString(1, MemberVO.loginVO.getId());
-		
-			pstmt.executeUpdate();
-			
-			
+			pstmt.executeUpdate();	
 			ResultSet rs = pstmt.executeQuery();
-			
-
 			while (rs.next()) {
 				int no = rs.getInt("email_cd");
 				String sender = rs.getString("sender");
@@ -41,8 +35,7 @@ public class InboxDAO {
 				String time = rs.getString("time");
 				
 				InboxVO inbox= new InboxVO(no, sender, receiver, title, contents, time);
-				list.add(inbox);
-					
+				list.add(inbox);		
 			}
 
 		} catch (Exception e) {
