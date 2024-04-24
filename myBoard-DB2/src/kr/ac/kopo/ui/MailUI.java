@@ -1,15 +1,20 @@
 package kr.ac.kopo.ui;
 
+import find.FindUI;
+import login_logout.LoginUI;
+
 public class MailUI extends BaseUI{
 	
 	private int choiceMenu() {
-		System.out.println("****** 또니메일에 오신 것을 환영합니다 ******");
-		System.out.println("       ****** MENU ******");
+		System.out.println("====================================");
+		System.out.println("  >>>>>>>WELCOME TO 또니메일<<<<<<<");
+		System.out.println("====================================");
 		System.out.println("1. 로그인");
 		System.out.println("2. ID/PW 찾기");
 		System.out.println("3. 회원가입");
 		System.out.println("4. 프로그램 종료");
-		int type = scanInt("항목을 선택하세요 : ");
+		System.out.println("====================================");
+		int type = scanInt("");
 		return type;
 
 	}
@@ -24,19 +29,14 @@ public class MailUI extends BaseUI{
 				ui = new LoginUI();
 				break;
 			case 2:
-				ui = new SearchOneUI();
+				ui = new FindUI();
 				break;
 			case 3:
 				ui = new JoinUI();
 				break;
 			case 4:
-				ui = new UpdateUI();
-				break;
-			case 5:
-				ui = new DeleteUI();
-				break;
-			case 0:
 				ui = new ExitUI();
+				break;
 			}
 			
 			if(ui != null) {

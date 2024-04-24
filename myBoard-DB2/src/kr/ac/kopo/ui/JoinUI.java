@@ -7,8 +7,8 @@ public class JoinUI extends BaseUI {
 	@Override
 	public void execute() throws Exception {
 
-		String name = scanStr("이름");
-		int phone = scanInt("전화번호");
+		String name = scanStr("이름을 입력하세용: ");
+		int phone = scanInt("전화번호를 입력하세용: ");
 		int bd = scanInt("생년월일8자리 ex)19951226 ");
 		String id = scanStr("아이디 입력");
 		String password = scanStr("비밀번호 입력");

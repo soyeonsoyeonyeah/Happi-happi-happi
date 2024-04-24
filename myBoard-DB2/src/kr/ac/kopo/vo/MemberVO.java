@@ -2,7 +2,7 @@ package kr.ac.kopo.vo;
 
 public class MemberVO {
 
-
+	public static MemberVO loginVO;
 	private String name;
 	private int phone;
 	private int bd;
