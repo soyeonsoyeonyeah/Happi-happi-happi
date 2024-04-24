@@ -20,8 +20,7 @@ public class InboxDAO {
 		sql.append(" from email ");
 		sql.append(" where sender = ? and status = 1 ");
 		try (Connection conn = new ConnectionFactory().getConnection();
-			PreparedStatement pstmt = conn.prepareStatement(sql.toString())
-					
+			PreparedStatement pstmt = conn.prepareStatement(sql.toString())		
 			) {
 			pstmt.setString(1, MemberVO.loginVO.getId());
 			pstmt.executeUpdate();	
@@ -42,7 +41,6 @@ public class InboxDAO {
 			e.printStackTrace();
 		}
 		return list;
-
 	}
 	
 	
